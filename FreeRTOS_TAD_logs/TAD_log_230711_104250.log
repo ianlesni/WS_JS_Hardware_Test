@@ -1,0 +1,13 @@
+"Task Aware Debugger for GDB" version 11.4.0 (202108190644)
+(c) 2016-2021 NXP Semiconductors, Inc.
+==================================
+10:41:30.547 INFO: [TadModel] DSF session ID 11 has started.
+10:41:35.286 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+10:41:35.504 INFO: [TadState] TAD state changed: DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+10:41:36.504 INFO: [TadState] TAD state changed: DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+10:41:36.665 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+10:41:40.602 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+10:41:43.989 INFO: [TadState] TAD state changed: DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+10:41:47.690 INFO: [TadState] TAD state changed: READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+10:41:51.104 INFO: [TadState] TAD state changed: DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+10:42:50.971 INFO: [TadModel] DSF session ID 11 has ended.

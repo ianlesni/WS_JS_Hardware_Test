@@ -1,0 +1,138 @@
+/*
+ * Copyright (c) 2016, Freescale Semiconductor, Inc.
+ * Copyright 2016-2017 NXP
+ * All rights reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+#include "fsl_debug_console.h"
+#include "board.h"
+#include "fsl_pint.h"
+#include "fsl_i2C.h"
+#include "peripherals.h"
+
+#include "pin_mux.h"
+#if defined(FSL_FEATURE_SYSCON_HAS_PINT_SEL_REGISTER) && FSL_FEATURE_SYSCON_HAS_PINT_SEL_REGISTER
+#include "fsl_syscon.h"
+#else
+#include "fsl_inputmux.h"
+#endif /* FSL_FEATURE_SYSCON_HAS_PINT_SEL_REGISTER */
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+#define DEMO_PINT_PIN_INT0_SRC kSYSCON_GpioPort0Pin12ToPintsel
+#define DEMO_PINT_PIN_INT1_SRC kSYSCON_GpioPort0Pin4ToPintsel
+#define CANT_BYTES  2 //Cantidad de bytes a leer
+#define ADDRS_JS_1 0x40
+#define ADDRS_JS_2 0x82
+/*******************************************************************************
+ * Prototypes
+ ******************************************************************************/
+
+/*******************************************************************************
+ * Variables
+ ******************************************************************************/
+uint16_t datos_js_1 = 0; //datos recibidos
+uint8_t X_js_1 = 0;		//coordenadas en X
+uint8_t Y_js_1 = 0;		//coordenadas en Y
+
+uint16_t datos_js_2 = 0; //datos recibidos
+uint8_t X_js_2 = 0;		//coordenadas en X
+uint8_t Y_js_2 = 0;		//coordenadas en Y
+
+status_t qcp = 0;
+/*******************************************************************************
+ * Code
+ ******************************************************************************/
+
+/*!
+ * @brief Call back for PINT Pin interrupt 0
+ */
+void pint_intr_callback_K1(pint_pin_int_t pintr, uint32_t pmatch_status)
+{
+	LED_RED_TOGGLE();
+
+    PRINTF("\f\r\nInterrupcion en K1");
+//    I2C_MasterStart(I2C1, ADDRS_JS_1, kI2C_Read);
+//    I2C_MasterReadBlocking(I2C1, &datos_js_1, CANT_BYTES, kI2C_TransferDefaultFlag);
+//    I2C_MasterStop(I2C1);
+    PRINTF("\f\r\nCoordenadas JoyStick 1: %u",datos_js_1);
+}
+
+/*!
+ * @brief Call back for PINT Pin interrupt 1.
+ */
+void pint_intr_callback_K3(pint_pin_int_t pintr, uint32_t pmatch_status)
+{
+    PRINTF("\f\r\nInterrupcion en K3");
+    LED_RED_TOGGLE();
+	I2C_MasterStart(I2C1, ADDRS_JS_1, kI2C_Write);
+//	qcp = I2C_MasterReadBlocking(I2C1, &datos_js_1, CANT_BYTES, kI2C_TransferDefaultFlag);
+//	I2C_MasterStop(I2C1);
+//    I2C_MasterReadBlocking(I2C1, &datos_js_2, CANT_BYTES, kI2C_TransferDefaultFlag);
+//    PRINTF("\f\r\nCoordenadas JoyStick 2: %u",datos_js_2);
+}
+/*!
+ * @brief Main function
+ */
+int main(void)
+{
+    /* Board pin, clock, debug console init */
+    /* Select the main clock as source clock of USART0 (debug console) */
+//    CLOCK_Select(BOARD_DEBUG_USART_CLK_ATTACH);
+
+
+    BOARD_BootClockFRO18M();
+    BOARD_InitDebugConsole();
+    BOARD_InitBootPeripherals();
+    BOARD_InitPins();
+
+
+#if defined(FSL_FEATURE_SYSCON_HAS_PINT_SEL_REGISTER) && FSL_FEATURE_SYSCON_HAS_PINT_SEL_REGISTER
+    /* Connect trigger sources to PINT */
+    SYSCON_AttachSignal(SYSCON, kPINT_PinInt0, DEMO_PINT_PIN_INT0_SRC);
+    SYSCON_AttachSignal(SYSCON, kPINT_PinInt1, DEMO_PINT_PIN_INT1_SRC);
+#else
+    /* Connect trigger sources to PINT */
+    INPUTMUX_Init(INPUTMUX);
+    INPUTMUX_AttachSignal(INPUTMUX, kPINT_PinInt0, DEMO_PINT_PIN_INT0_SRC);
+    INPUTMUX_AttachSignal(INPUTMUX, kPINT_PinInt1, DEMO_PINT_PIN_INT1_SRC);
+    /* Turnoff clock to inputmux to save power. Clock is only needed to make changes */
+    INPUTMUX_Deinit(INPUTMUX);
+#endif /* FSL_FEATURE_SYSCON_HAS_PINT_SEL_REGISTER */
+
+    /* Clear screen*/
+    PRINTF("%c[2J", 27);
+    /* Set cursor location at [0,0] */
+    PRINTF("%c[0;0H", 27);
+    PRINTF("\f\r\nPrueba de hardware Joysticks\r\n");
+
+    /* Initialize PINT */
+    PINT_Init(PINT);
+
+    /* Setup Pin Interrupt 0 */
+    PINT_PinInterruptConfig(PINT, kPINT_PinInt0, kPINT_PinIntEnableFallEdge , pint_intr_callback_K3);
+    /* Enable callbacks for PINT0 by Index */
+    PINT_EnableCallbackByIndex(PINT, kPINT_PinInt0);
+
+#if (FSL_FEATURE_PINT_NUMBER_OF_CONNECTED_OUTPUTS > 1U)
+    /* Setup Pin Interrupt 1 */
+    PINT_PinInterruptConfig(PINT, kPINT_PinInt1, kPINT_PinIntEnableFallEdge , pint_intr_callback_K1);
+    /* Enable callbacks for PINT1 by Index */
+    PINT_EnableCallbackByIndex(PINT, kPINT_PinInt1);
+#endif
+
+    PRINTF("\r\nPINT Pin Interrupt events are configured\r\n");
+
+
+    /* Turn on LED RED */
+    LED_RED_INIT(LOGIC_LED_ON);
+    LED_RED_OFF();
+    //I2C_MasterStart(I2C1, ADDRS_JS_2, kI2C_Read);
+
+    while (1)
+    {
+        __WFI();
+    }
+}

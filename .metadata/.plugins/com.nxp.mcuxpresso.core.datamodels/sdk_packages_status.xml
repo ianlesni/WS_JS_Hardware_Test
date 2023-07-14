@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdk-packages>
+<package hash="1672079239723" path="C:\Users\Ilesnianski\mcuxpresso\02\SDKPackages\SDK_2_8_0_LPC845BREAKOUT.zip" schema="manifest-schema/sdk_manifest_v3.7.xsd"/>
+<package hash="1682091809947" path="C:\Users\Ilesnianski\mcuxpresso\02\SDKPackages\SDK_2_8_0_FRDM-K64F.zip" schema="manifest-schema/sdk_manifest_v3.7.xsd"/>
+<package hash="1688579785501" path="C:\Users\IanLesnianski\mcuxpresso\02\SDKPackages\SDK_2_8_0_LPC845BREAKOUT.zip" schema="manifest-schema/sdk_manifest_v3.7.xsd"/>
+<package hash="1605963606000" path="C:\Users\Ilesnianski\mcuxpresso\02\SDKPackages\SDK_2_8_0_LPC845BREAKOUT" schema="manifest-schema/sdk_manifest_v3.7.xsd"/>
+</sdk-packages>

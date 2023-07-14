@@ -1,0 +1,4 @@
+../board/peripherals.c:92:13:USART0_init	8	static
+../board/peripherals.c:127:13:I2C1_init	8	static
+../board/peripherals.c:135:6:BOARD_InitPeripherals	8	static
+../board/peripherals.c:145:6:BOARD_InitBootPeripherals	8	static

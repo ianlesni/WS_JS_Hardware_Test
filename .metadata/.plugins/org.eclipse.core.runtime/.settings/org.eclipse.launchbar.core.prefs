@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lpc845breakout_JoyStick_HW_Test LinkServer Debug (1)
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lpc845breakout_JoyStick_HW_Test\ LinkServer\ Debug\ (1)/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lpc845breakout_JoyStick_HW_Test\ LinkServer\ Debug\ (1)/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lpc845breakout_JoyStick_HW_Test\ LinkServer\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lpc845breakout_JoyStick_HW_Test\ LinkServer\ Debug/activeLaunchTarget=null\:---

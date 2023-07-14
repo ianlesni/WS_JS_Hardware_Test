@@ -1,0 +1,9 @@
+C:\Users\Rprato\OneDrive - ADIMRA II\OneDrive - ADIMRA\Joystick\WS_Hardware_Test(doubt)\lpc845breakout_JoyStick_HW_Test\drivers/fsl_clock.h:463:20:CLOCK_Select	16	static
+C:\Users\Rprato\OneDrive - ADIMRA II\OneDrive - ADIMRA\Joystick\WS_Hardware_Test(doubt)\lpc845breakout_JoyStick_HW_Test\drivers/fsl_clock.h:495:20:CLOCK_SetCoreSysClkDiv	16	static
+C:\Users\Rprato\OneDrive - ADIMRA II\OneDrive - ADIMRA\Joystick\WS_Hardware_Test(doubt)\lpc845breakout_JoyStick_HW_Test\drivers/fsl_clock.h:719:20:CLOCK_SetFroOscFreq	16	static
+C:\Users\Rprato\OneDrive - ADIMRA II\OneDrive - ADIMRA\Joystick\WS_Hardware_Test(doubt)\lpc845breakout_JoyStick_HW_Test\drivers/fsl_power.h:126:20:POWER_DisablePD	16	static
+../board/clock_config.c:38:6:BOARD_InitBootClocks	8	static
+../board/clock_config.c:77:6:BOARD_BootClockFRO18M	8	static
+../board/clock_config.c:124:6:BOARD_BootClockFRO24M	8	static
+../board/clock_config.c:167:6:BOARD_BootClockFRO30M	8	static
+../board/clock_config.c:213:6:BOARD_BootClockPll24M	16	static

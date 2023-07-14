@@ -1,5 +1,5 @@
-C:\Users\Rprato\OneDrive - ADIMRA II\OneDrive - ADIMRA\Joystick\WS_Hardware_Test(doubt)\lpc845breakout_JoyStick_HW_Test\drivers/fsl_clock.h:441:20:CLOCK_EnableClock	16	static
-C:\Users\Rprato\OneDrive - ADIMRA II\OneDrive - ADIMRA\Joystick\WS_Hardware_Test(doubt)\lpc845breakout_JoyStick_HW_Test\drivers/fsl_clock.h:452:20:CLOCK_DisableClock	16	static
-C:\Users\Rprato\OneDrive - ADIMRA II\OneDrive - ADIMRA\Joystick\WS_Hardware_Test(doubt)\lpc845breakout_JoyStick_HW_Test\drivers/fsl_iocon.h:102:22:IOCON_PinMuxSet	24	static
+C:\Users\Ilesnianski\OneDrive - ADIMRA\Joystick\WS_JS_Hardware_Test\lpc845breakout_JoyStick_HW_Test\drivers/fsl_clock.h:441:20:CLOCK_EnableClock	16	static
+C:\Users\Ilesnianski\OneDrive - ADIMRA\Joystick\WS_JS_Hardware_Test\lpc845breakout_JoyStick_HW_Test\drivers/fsl_clock.h:452:20:CLOCK_DisableClock	16	static
+C:\Users\Ilesnianski\OneDrive - ADIMRA\Joystick\WS_JS_Hardware_Test\lpc845breakout_JoyStick_HW_Test\drivers/fsl_iocon.h:102:22:IOCON_PinMuxSet	24	static
 ../board/pin_mux.c:37:6:BOARD_InitBootPins	8	static
 ../board/pin_mux.c:69:6:BOARD_InitPins	32	static

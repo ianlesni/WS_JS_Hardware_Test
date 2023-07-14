@@ -207,7 +207,7 @@ Discarded input sections
  .bss.X_js_2    0x00000000        0x1 ./source/pint_pin_interrupt.o
  .bss.Y_js_2    0x00000000        0x1 ./source/pint_pin_interrupt.o
  .text.pint_intr_callback_K1
-                0x00000000       0x40 ./source/pint_pin_interrupt.o
+                0x00000000       0x6c ./source/pint_pin_interrupt.o
  .debug_macro   0x00000000      0xa84 ./source/pint_pin_interrupt.o
  .debug_macro   0x00000000       0x10 ./source/pint_pin_interrupt.o
  .debug_macro   0x00000000       0x1c ./source/pint_pin_interrupt.o
@@ -396,8 +396,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x125 ./drivers/fsl_common.o
  .debug_macro   0x00000000       0x16 ./drivers/fsl_common.o
  .debug_macro   0x00000000       0x81 ./drivers/fsl_common.o
- .debug_line    0x00000000      0x43b ./drivers/fsl_common.o
- .debug_str     0x00000000    0x3624a ./drivers/fsl_common.o
+ .debug_line    0x00000000      0x413 ./drivers/fsl_common.o
+ .debug_str     0x00000000    0x36236 ./drivers/fsl_common.o
  .comment       0x00000000       0x4e ./drivers/fsl_common.o
  .debug_frame   0x00000000       0x94 ./drivers/fsl_common.o
  .ARM.attributes
@@ -650,8 +650,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x125 ./drivers/fsl_inputmux.o
  .debug_macro   0x00000000       0x16 ./drivers/fsl_inputmux.o
  .debug_macro   0x00000000       0x81 ./drivers/fsl_inputmux.o
- .debug_line    0x00000000      0x431 ./drivers/fsl_inputmux.o
- .debug_str     0x00000000    0x36e36 ./drivers/fsl_inputmux.o
+ .debug_line    0x00000000      0x409 ./drivers/fsl_inputmux.o
+ .debug_str     0x00000000    0x36e22 ./drivers/fsl_inputmux.o
  .comment       0x00000000       0x4e ./drivers/fsl_inputmux.o
  .debug_frame   0x00000000       0xb0 ./drivers/fsl_inputmux.o
  .ARM.attributes
@@ -811,8 +811,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./drivers/fsl_power.o
  .debug_macro   0x00000000       0x81 ./drivers/fsl_power.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_power.o
- .debug_line    0x00000000      0x61c ./drivers/fsl_power.o
- .debug_str     0x00000000    0x36947 ./drivers/fsl_power.o
+ .debug_line    0x00000000      0x5f4 ./drivers/fsl_power.o
+ .debug_str     0x00000000    0x36933 ./drivers/fsl_power.o
  .comment       0x00000000       0x4e ./drivers/fsl_power.o
  .debug_frame   0x00000000      0x150 ./drivers/fsl_power.o
  .ARM.attributes
@@ -1589,7 +1589,7 @@ END GROUP
                 0x10004000                __top_IAP_SRAM = 0x10004000
                 0x10004000                __top_RAM2 = 0x10004000
 
-.text           0x00000000     0x33f8
+.text           0x00000000     0x33e4
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(SORT_BY_ALIGNMENT(.isr_vector))
@@ -1599,10 +1599,10 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0x33f8 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0x33e4 LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000080 ADDR (.data)
                 0x000000c8        0x4 LONG 0x4 SIZEOF (.data)
-                0x000000cc        0x4 LONG 0x33f8 LOADADDR (.data_RAM2)
+                0x000000cc        0x4 LONG 0x33e4 LOADADDR (.data_RAM2)
                 0x000000d0        0x4 LONG 0x10003fe0 ADDR (.data_RAM2)
                 0x000000d4        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x000000d8                __data_section_table_end = .
@@ -2088,53 +2088,53 @@ END GROUP
  .rodata.BOARD_InitDebugConsole.str1.4
                 0x0000330c       0x28 ./board/board.o
  .rodata.CLOCK_SetCoreSysClkDiv.str1.4
-                0x00003334       0x9e ./board/clock_config.o
- *fill*         0x000033d2        0x2 ff
+                0x00003334       0x8a ./board/clock_config.o
+ *fill*         0x000033be        0x2 ff
  .rodata.USART0_config
-                0x000033d4       0x10 ./board/peripherals.o
-                0x000033d4                USART0_config
+                0x000033c0       0x10 ./board/peripherals.o
+                0x000033c0                USART0_config
  .rodata.I2C1_config
-                0x000033e4        0xc ./board/peripherals.o
-                0x000033e4                I2C1_config
+                0x000033d0        0xc ./board/peripherals.o
+                0x000033d0                I2C1_config
  .rodata.__num_Ciob_streams
-                0x000033f0        0x4 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_nohost_nf.a(__ciob.o)
-                0x000033f0                __num_Ciob_streams
+                0x000033dc        0x4 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_nohost_nf.a(__ciob.o)
+                0x000033dc                __num_Ciob_streams
  .rodata._initio.str1.1
-                0x000033f4        0x4 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(initio.o)
-                0x000033f8                . = ALIGN (0x4)
+                0x000033e0        0x4 c:/nxp/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libcr_c.a(initio.o)
+                0x000033e4                . = ALIGN (0x4)
 
-.glue_7         0x000033f8        0x0
- .glue_7        0x000033f8        0x0 linker stubs
+.glue_7         0x000033e4        0x0
+ .glue_7        0x000033e4        0x0 linker stubs
 
-.glue_7t        0x000033f8        0x0
- .glue_7t       0x000033f8        0x0 linker stubs
+.glue_7t        0x000033e4        0x0
+ .glue_7t       0x000033e4        0x0 linker stubs
 
-.vfp11_veneer   0x000033f8        0x0
- .vfp11_veneer  0x000033f8        0x0 linker stubs
+.vfp11_veneer   0x000033e4        0x0
+ .vfp11_veneer  0x000033e4        0x0 linker stubs
 
-.v4_bx          0x000033f8        0x0
- .v4_bx         0x000033f8        0x0 linker stubs
+.v4_bx          0x000033e4        0x0
+ .v4_bx         0x000033e4        0x0 linker stubs
 
-.iplt           0x000033f8        0x0
- .iplt          0x000033f8        0x0 ./utilities/fsl_assert.o
+.iplt           0x000033e4        0x0
+ .iplt          0x000033e4        0x0 ./utilities/fsl_assert.o
 
-.rel.dyn        0x000033f8        0x0
- .rel.iplt      0x000033f8        0x0 ./utilities/fsl_assert.o
+.rel.dyn        0x000033e4        0x0
+ .rel.iplt      0x000033e4        0x0 ./utilities/fsl_assert.o
 
 .ARM.extab
  *(SORT_BY_ALIGNMENT(.ARM.extab*) SORT_BY_ALIGNMENT(.gnu.linkonce.armextab.*))
 
-.ARM.exidx      0x000033f8        0x0
-                0x000033f8                __exidx_start = .
+.ARM.exidx      0x000033e4        0x0
+                0x000033e4                __exidx_start = .
  *(SORT_BY_ALIGNMENT(.ARM.exidx*) SORT_BY_ALIGNMENT(.gnu.linkonce.armexidx.*))
-                0x000033f8                __exidx_end = .
-                0x000033f8                _etext = .
+                0x000033e4                __exidx_end = .
+                0x000033e4                _etext = .
 
 .mtb_buffer_RAM2
  *(SORT_BY_ALIGNMENT(.mtb.$RAM2*))
  *(SORT_BY_ALIGNMENT(.mtb.$IAP_SRAM*))
 
-.data_RAM2      0x10003fe0        0x0 load address 0x000033f8
+.data_RAM2      0x10003fe0        0x0 load address 0x000033e4
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2 = .)
                 [!provide]                PROVIDE (__start_data_IAP_SRAM = .)
@@ -2161,7 +2161,7 @@ END GROUP
                 0x10000080                . = ALIGN (0x4)
                 0x10000080                _end_uninit_RESERVED = .
 
-.data           0x10000080        0x4 load address 0x000033f8
+.data           0x10000080        0x4 load address 0x000033e4
  FILL mask 0xff
                 0x10000080                _data = .
                 [!provide]                PROVIDE (__start_data_RAM = .)
@@ -2180,7 +2180,7 @@ END GROUP
                 [!provide]                PROVIDE (__end_data_RAM = .)
                 [!provide]                PROVIDE (__end_data_SRAM = .)
 
-.igot.plt       0x10000084        0x0 load address 0x000033fc
+.igot.plt       0x10000084        0x0 load address 0x000033e8
  .igot.plt      0x10000084        0x0 ./utilities/fsl_assert.o
 
 .bss_RAM2       0x10003fe0        0x0
@@ -2263,8 +2263,8 @@ END GROUP
                 0x10003fe0                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_SRAM - 0x0))
                 0xefffb897                PROVIDE (__valid_user_code_checksum = (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
                 0x00000000                _image_start = LOADADDR (.text)
-                0x000033fc                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x000033fc                _image_size = (_image_end - _image_start)
+                0x000033e8                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x000033e8                _image_size = (_image_end - _image_start)
 OUTPUT(lpc845breakout_JoyStick_HW_Test.axf elf32-littlearm)
 LOAD linker stubs
 
@@ -2444,69 +2444,69 @@ LOAD linker stubs
  .debug_macro   0x00008e23      0x13b ./board/pin_mux.o
  .debug_macro   0x00008f5e       0x76 ./board/pin_mux.o
 
-.debug_line     0x00000000     0x7d45
- .debug_line    0x00000000      0x40e ./utilities/fsl_assert.o
- .debug_line    0x0000040e      0xcc9 ./utilities/fsl_debug_console.o
- .debug_line    0x000010d7      0x26f ./startup/startup_lpc845.o
- .debug_line    0x00001346       0xd1 ./source/mtb.o
- .debug_line    0x00001417      0x652 ./source/pint_pin_interrupt.o
- .debug_line    0x00001a69       0x59 ./source/semihost_hardfault.o
- .debug_line    0x00001ac2      0xa69 ./drivers/fsl_clock.o
- .debug_line    0x0000252b      0x3f4 ./drivers/fsl_gpio.o
- .debug_line    0x0000291f     0x130b ./drivers/fsl_i2c.o
- .debug_line    0x00003c2a      0xaf7 ./drivers/fsl_pint.o
- .debug_line    0x00004721      0x3dd ./drivers/fsl_reset.o
- .debug_line    0x00004afe      0x43d ./drivers/fsl_swm.o
- .debug_line    0x00004f3b      0x3ad ./drivers/fsl_syscon.o
- .debug_line    0x000052e8      0xd01 ./drivers/fsl_usart.o
- .debug_line    0x00005fe9      0x410 ./device/system_LPC845.o
- .debug_line    0x000063f9      0x58b ./component/uart/miniusart_adapter.o
- .debug_line    0x00006984      0x4e2 ./board/board.o
- .debug_line    0x00006e66      0x53c ./board/clock_config.o
- .debug_line    0x000073a2      0x473 ./board/peripherals.o
- .debug_line    0x00007815      0x530 ./board/pin_mux.o
+.debug_line     0x00000000     0x79cf
+ .debug_line    0x00000000      0x3d2 ./utilities/fsl_assert.o
+ .debug_line    0x000003d2      0xc79 ./utilities/fsl_debug_console.o
+ .debug_line    0x0000104b      0x26f ./startup/startup_lpc845.o
+ .debug_line    0x000012ba       0xd1 ./source/mtb.o
+ .debug_line    0x0000138b      0x5fc ./source/pint_pin_interrupt.o
+ .debug_line    0x00001987       0x59 ./source/semihost_hardfault.o
+ .debug_line    0x000019e0      0xa41 ./drivers/fsl_clock.o
+ .debug_line    0x00002421      0x3cc ./drivers/fsl_gpio.o
+ .debug_line    0x000027ed     0x12e3 ./drivers/fsl_i2c.o
+ .debug_line    0x00003ad0      0xacf ./drivers/fsl_pint.o
+ .debug_line    0x0000459f      0x3b5 ./drivers/fsl_reset.o
+ .debug_line    0x00004954      0x415 ./drivers/fsl_swm.o
+ .debug_line    0x00004d69      0x385 ./drivers/fsl_syscon.o
+ .debug_line    0x000050ee      0xcd9 ./drivers/fsl_usart.o
+ .debug_line    0x00005dc7      0x3fc ./device/system_LPC845.o
+ .debug_line    0x000061c3      0x54f ./component/uart/miniusart_adapter.o
+ .debug_line    0x00006712      0x492 ./board/board.o
+ .debug_line    0x00006ba4      0x500 ./board/clock_config.o
+ .debug_line    0x000070a4      0x437 ./board/peripherals.o
+ .debug_line    0x000074db      0x4f4 ./board/pin_mux.o
 
-.debug_str      0x00000000    0x3f27d
- .debug_str     0x00000000    0x361bf ./utilities/fsl_assert.o
-                              0x36249 (size before relaxing)
- .debug_str     0x000361bf     0x17d6 ./utilities/fsl_debug_console.o
-                              0x37a7d (size before relaxing)
- .debug_str     0x00037995      0x4cf ./startup/startup_lpc845.o
-                               0x3202 (size before relaxing)
- .debug_str     0x00037e64      0x532 ./source/mtb.o
-                               0x3234 (size before relaxing)
- .debug_str     0x00038396     0x22e2 ./source/pint_pin_interrupt.o
-                              0x3906a (size before relaxing)
- .debug_str     0x0003a678       0x1f ./source/semihost_hardfault.o
-                               0x2d21 (size before relaxing)
- .debug_str     0x0003a697      0x917 ./drivers/fsl_clock.o
-                              0x37543 (size before relaxing)
- .debug_str     0x0003afae      0x503 ./drivers/fsl_gpio.o
-                              0x37218 (size before relaxing)
- .debug_str     0x0003b4b1      0xfe0 ./drivers/fsl_i2c.o
-                              0x384ed (size before relaxing)
- .debug_str     0x0003c491      0x65b ./drivers/fsl_pint.o
-                              0x37f17 (size before relaxing)
- .debug_str     0x0003caec       0xae ./drivers/fsl_reset.o
-                              0x3677a (size before relaxing)
- .debug_str     0x0003cb9a      0xb13 ./drivers/fsl_swm.o
-                              0x36d56 (size before relaxing)
- .debug_str     0x0003d6ad       0x51 ./drivers/fsl_syscon.o
-                              0x36d09 (size before relaxing)
- .debug_str     0x0003d6fe      0xbd6 ./drivers/fsl_usart.o
-                              0x38158 (size before relaxing)
- .debug_str     0x0003e2d4       0x8f ./device/system_LPC845.o
-                              0x35008 (size before relaxing)
- .debug_str     0x0003e363       0xf7 ./component/uart/miniusart_adapter.o
-                              0x3744c (size before relaxing)
- .debug_str     0x0003e45a      0x6ff ./board/board.o
-                              0x382bb (size before relaxing)
- .debug_str     0x0003eb59      0x2a3 ./board/clock_config.o
-                              0x36ff2 (size before relaxing)
- .debug_str     0x0003edfc       0x77 ./board/peripherals.o
-                              0x372e8 (size before relaxing)
- .debug_str     0x0003ee73      0x40a ./board/pin_mux.o
-                              0x378ac (size before relaxing)
+.debug_str      0x00000000    0x3f269
+ .debug_str     0x00000000    0x361ab ./utilities/fsl_assert.o
+                              0x36235 (size before relaxing)
+ .debug_str     0x000361ab     0x17d6 ./utilities/fsl_debug_console.o
+                              0x37a69 (size before relaxing)
+ .debug_str     0x00037981      0x4cf ./startup/startup_lpc845.o
+                               0x31ee (size before relaxing)
+ .debug_str     0x00037e50      0x532 ./source/mtb.o
+                               0x3220 (size before relaxing)
+ .debug_str     0x00038382     0x22e2 ./source/pint_pin_interrupt.o
+                              0x39056 (size before relaxing)
+ .debug_str     0x0003a664       0x1f ./source/semihost_hardfault.o
+                               0x2d0d (size before relaxing)
+ .debug_str     0x0003a683      0x917 ./drivers/fsl_clock.o
+                              0x3752f (size before relaxing)
+ .debug_str     0x0003af9a      0x503 ./drivers/fsl_gpio.o
+                              0x37204 (size before relaxing)
+ .debug_str     0x0003b49d      0xfe0 ./drivers/fsl_i2c.o
+                              0x384d9 (size before relaxing)
+ .debug_str     0x0003c47d      0x65b ./drivers/fsl_pint.o
+                              0x37f03 (size before relaxing)
+ .debug_str     0x0003cad8       0xae ./drivers/fsl_reset.o
+                              0x36766 (size before relaxing)
+ .debug_str     0x0003cb86      0xb13 ./drivers/fsl_swm.o
+                              0x36d42 (size before relaxing)
+ .debug_str     0x0003d699       0x51 ./drivers/fsl_syscon.o
+                              0x36cf5 (size before relaxing)
+ .debug_str     0x0003d6ea      0xbd6 ./drivers/fsl_usart.o
+                              0x38144 (size before relaxing)
+ .debug_str     0x0003e2c0       0x8f ./device/system_LPC845.o
+                              0x34ff4 (size before relaxing)
+ .debug_str     0x0003e34f       0xf7 ./component/uart/miniusart_adapter.o
+                              0x37438 (size before relaxing)
+ .debug_str     0x0003e446      0x6ff ./board/board.o
+                              0x382a7 (size before relaxing)
+ .debug_str     0x0003eb45      0x2a3 ./board/clock_config.o
+                              0x36fde (size before relaxing)
+ .debug_str     0x0003ede8       0x77 ./board/peripherals.o
+                              0x372d4 (size before relaxing)
+ .debug_str     0x0003ee5f      0x40a ./board/pin_mux.o
+                              0x37898 (size before relaxing)
 
 .comment        0x00000000       0x4d
  .comment       0x00000000       0x4d ./utilities/fsl_assert.o

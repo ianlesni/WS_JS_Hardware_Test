@@ -6,7 +6,7 @@
  * Generated linker script file for LPC845
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.4.1 [Build 6260] [2021-09-15] on 12 jul. 2023 15:40:11
+ * MCUXpresso IDE v11.4.1 [Build 6260] [2021-09-15] on 14 jul. 2023 15:55:32
  */
 
 INCLUDE "lpc845breakout_pint_pin_interrupt_Debug_library.ld"
